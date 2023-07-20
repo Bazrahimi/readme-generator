@@ -10,13 +10,14 @@
 // init();
 
 const fs = require('fs');
+const path = require('path'); // Import the path module
+console.log(path);
 console.log('index.js: Imported fs module')
 
 const inquirer = require('inquirer')
 console.log('index.js: imported inquirer package');
 const MarkDown = require('./utils/generateMarkdown');
 console.log('index.js: imported MarkDown clas from generateMakdown.js');
-
 
 
 // Readme questions
@@ -63,3 +64,30 @@ const questions = [
     message: 'Any other questions or feedback regarding the project?',
   },
 ];
+
+//function to write README file
+function writeToFile(fileName, data) {
+  const rootDir = process.cwd();
+  const outputPath = path.resolve(rootDir, fileName);
+  fs.writeFile(outputPath, data, (err) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log(`Successfully generated ${fileName} in the root directory!`);
+    }
+  });
+}
+
+
+//function to initialize app
+function init() {
+  inquirer
+    .prompt(questions)
+    .then((answers) => {
+      const readmeContent = MarkDown.generateReadme(answers);
+      writeToFile('README.md', readmeContent)
+    });  
+}
+
+//call init function to start the application
+init();
