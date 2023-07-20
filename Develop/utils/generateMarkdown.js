@@ -20,43 +20,43 @@
 class MarkDown {
   static generateReadme(answers) {
     return `
-  # ${answers.title};
+# ${answers.title}
 
-  ## Table of Content
-  - [Project description](#Desription)
-  - [Installation](#Installation)
-  - [Usage](#Usage)
-  - [License](#License)
-  - [Contributing](#Contributing)
-  - [Test](#Test)
-  - [Questions](#Questions)
+## Table of Contents
+- [Description](#Description)
+- [Installation](#Installation)
+- [Usage](#Usage)
+- [License](#License)
+- [Contributing](#Contributing)
+- [Test](#Test)
+- [Questions](#Questions)
 
-  ## Description
-  ${answers.description}
+## Description
+${answers.description}
 
-  ## Installation
-  ${answers.installation}
+## Installation
+${answers.installation}
 
-  ## Usage
-  ${answers.usage}
+## Usage
+${answers.usage}
 
-  ## License
-  ${answers.license}
+## License
+${answers.license}
 
-  ## Conbributing
-  ${answers.contributing}
+## Contributing
+${answers.contributing}
 
-  ## Test
-  ${answers.test}
+## Test
+${answers.test}
 
-  ## Questions
-  ${answers.email}
-  ${answers.github}
+## Questions
+${answers.questions}
 
-    `
-
-
+For any questions or feedback, feel free to reach out to me via:
+- Email: ${answers.email}
+- GitHub: [${answers.github}](https://github.com/${answers.github})
+    `;
   }
 }
 
-module.exports = generateMarkdown;
+module.exports = MarkDown;
