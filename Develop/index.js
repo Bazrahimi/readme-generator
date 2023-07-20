@@ -68,7 +68,7 @@ const questions = [
 //function to write README file
 function writeToFile(fileName, data) {
   const rootDir = process.cwd();
-  const outputPath = path.resolve(rootDir, fileName);
+  const outputPath = path.resolve(rootDir,'..', fileName);
   fs.writeFile(outputPath, data, (err) => {
     if (err) {
       console.log(err);
