@@ -45,7 +45,8 @@ ${answers.license}
 ${licenseLink}
 
 ## Contributing
-${answers.contributing}
+${answers.DevelopersText}
+${answers.contributingText}
 
 ## Test
 ${answers.test}
