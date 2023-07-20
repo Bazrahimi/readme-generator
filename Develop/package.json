@@ -1,14 +1,24 @@
 {
-  "name": "static-site",
+  "name": "readme-generator",
   "version": "1.0.0",
-  "description": "",
+  "description": "A command-line application that dynamically generates a professional README.md file based on user input.",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Baz Rahimi",
   "license": "ISC",
   "dependencies": {
     "inquirer": "^8.2.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bazrahimi/readme-generator.git"
+  },
+  "homepage": "https://github.com/Bazrahimi/readme-generator#readme",
+  "bugs": {
+    "url": "https://github.com/Bazrahimi/readme-generator/issues"
+  },
+  "devDependencies": {}
 }
