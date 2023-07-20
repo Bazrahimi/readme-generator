@@ -42,6 +42,7 @@ ${answers.usage}
 
 ## License
 ${answers.license}
+${licenseLink}
 
 ## Contributing
 ${answers.contributing}

@@ -84,6 +84,22 @@ function init() {
   inquirer
     .prompt(questions)
     .then((answers) => {
+      //add additional text to readmeContent
+      switch (answers.license) {
+        case 'MIT':
+          answers.license = 'MIT\n\nThis package is licensed under the MIT license, which means that anyone who uses it within your organization will be bound by the terms of the MIT license.';
+          licenseLink = `
+          - [MIT License](https://opensource.org/licenses/MIT): The MIT License is a permissive open-source software license that allows you to use, modify, and distribute the software while providing credit to the original authors.`;
+          break;
+
+        case 'none':
+          answers.license = ' -None\n\nThis project does not have a specific license and is provided as-is with no warranty or support.';
+          break;
+      
+        default:
+          break;
+      }
+
       const readmeContent = MarkDown.generateReadme(answers);
       writeToFile('README.md', readmeContent)
     });  
