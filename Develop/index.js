@@ -1,14 +1,4 @@
 
-
-// // TODO: Create a function to write README file
-// function writeToFile(fileName, data) {}
-
-// // TODO: Create a function to initialize app
-// function init() {}
-
-// // Function call to initialize app
-// init();
-
 const fs = require('fs');
 const path = require('path'); // Import the path module
 console.log(path);
@@ -50,9 +40,16 @@ const questions = [
   },
   {
     type: 'input',
-    name: 'contributing',
-    message: 'Who are the contributors or contributing?',
+    name: 'contributors',
+    message: 'List the names or GitHub usernames of contributors (comma-separated if multiple):',
   },
+  {
+    type: 'list',
+    name: 'furtherContributions',
+    message: 'Do you wish to welcome further contributions from the developer community?',
+    choices: ['Yes', 'No'], 
+  },  
+
   {
     type: 'input',
     name: 'test',
@@ -86,6 +83,8 @@ function init() {
     .then((answers) => {
       const licenseText = renderLicenseChoice(answers.license, answers);
       answers.license = licenseText;
+      appendContributors(answers);
+      appendFurtherContributions(answers);
 
 
       const readmeContent = MarkDown.generateReadme(answers);
@@ -94,7 +93,6 @@ function init() {
 }
 
 //Render License Choice 
-
 function renderLicenseChoice(license, answers) {
  
   switch (answers.license) {
@@ -149,7 +147,6 @@ function renderLicenseChoice(license, answers) {
         `;
         break;
 
-
     case 'None':
       answers.license = ` None <br>
       <ul>
@@ -165,6 +162,35 @@ function renderLicenseChoice(license, answers) {
   }
   return answers.license
 }
+
+//Render contributors 
+function appendContributors(answers) {
+  const contributorsList = answers.contributors.split(', ').map((contributor) => contributor.trim());
+  const contributorsText = contributorsList.join(', ');
+  answers.contributors = `This project has been developed by ${contributorsText}.`;
+};
+
+//Render furtherContributions
+function appendFurtherContributions(answers) {
+  if (answers.furtherContributions === 'Yes') {
+    answers.contributingText = `
+    **We welcome contributions from the community!** If you would like to contribute to this project, please follow these guidelines:
+    
+    - Fork the repository and create your branch from the main branch.
+    - Make your changes and ensure that the code follows the project's coding style and conventions.
+    - Test your changes to ensure they work as expected.
+    - Submit a pull request with a detailed description of your changes and their purpose.
+    - After reviewing your pull request, we'll merge it if everything looks good!
+    
+    Thank you for contributing to our project!
+        `;
+      } else {
+        answers.contributingText = `
+    As this project is a one-time assignment, we are not currently open to accepting any additional contributions or continuing to work on it. Thank you for your understanding.
+        `;
+      };
+    }
+
 
 //call init function to start the application
 init();

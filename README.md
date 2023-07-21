@@ -40,16 +40,18 @@
 
 
 ## Contributing
-undefined
-// TODO: This project has been solely developed by
-undefined
-TODO: i want to append the following text in here. We welcome contributions from the community! If you would like to contribute to this project, please follow these guidelines:
-- Fork the repository and create your branch from the main branch.
-- Make your changes and ensure that the code follows the project's coding style and conventions.
-- Test your changes to ensure they work as expected.
-- Submit a pull request with a detailed description of your changes and their purpose.
-- After reviewing your pull request, we'll merge it if everything looks good!
-Thank you for contributing to our project!;
+This project has been developed by Baz Rahimi.
+
+    **We welcome contributions from the community!** If you would like to contribute to this project, please follow these guidelines:
+    
+    - Fork the repository and create your branch from the main branch.
+    - Make your changes and ensure that the code follows the project's coding style and conventions.
+    - Test your changes to ensure they work as expected.
+    - Submit a pull request with a detailed description of your changes and their purpose.
+    - After reviewing your pull request, we'll merge it if everything looks good!
+    
+    Thank you for contributing to our project!
+        
 
 ## Test
 
