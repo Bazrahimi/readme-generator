@@ -40,18 +40,18 @@
 
 
 ## Contributing
-This project has been developed by Baz Rahimi.
+This project has been developed by Baz rahimi.
 
-    **We welcome contributions from the community!** If you would like to contribute to this project, please follow these guidelines:
+**We welcome contributions from the community!** If you would like to contribute to this project, please follow these guidelines:
+
+1. Fork the repository and create your branch from the main branch.
+2. Make your changes and ensure that the code follows the project's coding style and conventions.
+3. Test your changes to ensure they work as expected.
+4. Submit a pull request with a detailed description of your changes and their purpose.
+5. After reviewing your pull request, we'll merge it if everything looks good!
+
+Thank you for contributing to our project!
     
-    - Fork the repository and create your branch from the main branch.
-    - Make your changes and ensure that the code follows the project's coding style and conventions.
-    - Test your changes to ensure they work as expected.
-    - Submit a pull request with a detailed description of your changes and their purpose.
-    - After reviewing your pull request, we'll merge it if everything looks good!
-    
-    Thank you for contributing to our project!
-        
 
 ## Test
 
