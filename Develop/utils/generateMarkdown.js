@@ -23,13 +23,14 @@ class MarkDown {
 # ${answers.title}
 
 ## Table of Contents
-- [Description](#Description)
-- [Installation](#Installation)
-- [Usage](#Usage)
-- [License](#License)
-- [Contributing](#Contributing)
-- [Test](#Test)
-- [Questions](#Questions)
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Technologies Used](#technologies)
+- [License](#license)
+- [Test](#test)
+- [Contributing](#contributing)
+- [Questions](#questions)
 
 ## Description
 ${answers.description}
@@ -40,16 +41,18 @@ ${answers.installation}
 ## Usage
 ${answers.usage}
 
+## Technologies
+${answers.technologiesUsed}
+
 ## License
 ${answers.license}
 
+## Test
+${answers.test}
 
 ## Contributing
 ${answers.contributors}
 ${answers.contributingText}
-
-## Test
-${answers.test}
 
 ## Questions
 ${answers.questions}

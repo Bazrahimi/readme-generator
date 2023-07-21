@@ -2,13 +2,14 @@
 # 
 
 ## Table of Contents
-- [Description](#Description)
-- [Installation](#Installation)
-- [Usage](#Usage)
-- [License](#License)
-- [Contributing](#Contributing)
-- [Test](#Test)
-- [Questions](#Questions)
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Technologies Used](#technologies)
+- [License](#license)
+- [Test](#test)
+- [Contributing](#contributing)
+- [Questions](#questions)
 
 ## Description
 
@@ -17,6 +18,12 @@
 
 
 ## Usage
+
+
+## Technologies
+Technologies Used in this Project: 
+- None
+
 
 
 ## License
@@ -38,9 +45,11 @@
       <br> 
       For more information about the MIT License, [click here](https://opensource.org/licenses/MIT).
 
+## Test
+
 
 ## Contributing
-This project has been developed by Baz rahimi.
+This project has been developed by .
 
 **We welcome contributions from the community!** If you would like to contribute to this project, please follow these guidelines:
 
@@ -52,9 +61,6 @@ This project has been developed by Baz rahimi.
 
 Thank you for contributing to our project!
     
-
-## Test
-
 
 ## Questions
 undefined

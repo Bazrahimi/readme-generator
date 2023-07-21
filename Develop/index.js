@@ -33,6 +33,12 @@ const questions = [
     message: 'What is the Project Usage?',
   },
   {
+    type: 'checkbox',
+    name: 'technologies',
+    message: 'Select the technologies used in the project:',
+    choices: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'GitHub', 'jQuery', 'Bootstrap', 'React', 'Vue.js', 'Express', 'MongoDB', 'MySQL', 'PostgreSQL', 'Python', 'Django' ],
+  },
+  {
     type: 'list',
     name: 'license',
     message: 'Choose a license for your project:',
@@ -85,6 +91,7 @@ function init() {
       answers.license = licenseText;
       appendContributors(answers);
       appendFurtherContributions(answers);
+      appendTechnologiesUsed(answers);
 
 
       const readmeContent = MarkDown.generateReadme(answers);
@@ -189,6 +196,13 @@ Thank you for contributing to our project!
 As this project is a one-time assignment, we are not currently open to accepting any additional contributions or continuing to work on it. Thank you for your understanding.
     `;
   };
+}
+
+//append list of Technologies used
+function appendTechnologiesUsed(answers) {
+  const technologiesUsed = answers.technologies.length > 0 ? answers.technologies.map(tech => `- ${tech}`).join('\n') : 'None';
+  answers.technologiesUsed = `Technologies Used in this Project: \n- ${technologiesUsed}\n\n`;
+  
 }
 
 //call init function to start the application
