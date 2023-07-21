@@ -20,13 +20,30 @@
 
 
 ## License
-MIT
 
-This package is licensed under the MIT license, which means that anyone who uses it within your organization will be bound by the terms of the MIT license.
-- [MIT License](https://opensource.org/licenses/MIT): The MIT License is a permissive open-source software license that allows you to use, modify, and distribute the software while providing credit to the original authors.
+      answers.license = '-MIT
+
+This package is licensed under the MIT license, which means that anyone who uses it within your organization will be bound by the terms of the MIT license.';
+       -Permission: The MIT License grants permission to anyone to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software. Users are not required to ask for permission or pay any royalties.
+       -Liability: The license comes with no warranty or liability. The software is provided "as is," and the copyright holder or contributors cannot be held liable for any damages or issues arising from its use. 
+       -Attribution: The license requires that the original copyright notice and the license text must be included in all copies or substantial portions of the software. 
+       -Compatibility: The MIT License is a permissive license, meaning it is compatible with other licenses. Developers can include MIT-licensed code in projects with different licenses without any conflict.
+
+      licenseLink = - [MIT License](https://opensource.org/licenses/MIT): The MIT License is a permissive open-source software license that allows you to use, modify, and distribute the software while providing credit to the original authors.
+      
+
 
 ## Contributing
-
+undefined
+// TODO: This project has been solely developed by
+undefined
+TODO: i want to append the following text in here. We welcome contributions from the community! If you would like to contribute to this project, please follow these guidelines:
+- Fork the repository and create your branch from the main branch.
+- Make your changes and ensure that the code follows the project's coding style and conventions.
+- Test your changes to ensure they work as expected.
+- Submit a pull request with a detailed description of your changes and their purpose.
+- After reviewing your pull request, we'll merge it if everything looks good!
+Thank you for contributing to our project!;
 
 ## Test
 
