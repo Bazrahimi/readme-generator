@@ -99,15 +99,13 @@ function renderLicenseChoice(license, answers) {
  
   switch (answers.license) {
     case 'MIT':
-      return `
-      answers.license = '-MIT\n\nThis package is licensed under the MIT license, which means that anyone who uses it within your organization will be bound by the terms of the MIT license.';
-       -Permission: The MIT License grants permission to anyone to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software. Users are not required to ask for permission or pay any royalties.
-       -Liability: The license comes with no warranty or liability. The software is provided "as is," and the copyright holder or contributors cannot be held liable for any damages or issues arising from its use. 
-       -Attribution: The license requires that the original copyright notice and the license text must be included in all copies or substantial portions of the software. 
-       -Compatibility: The MIT License is a permissive license, meaning it is compatible with other licenses. Developers can include MIT-licensed code in projects with different licenses without any conflict.
-
-      licenseLink = - [MIT License](https://opensource.org/licenses/MIT): The MIT License is a permissive open-source software license that allows you to use, modify, and distribute the software while providing credit to the original authors.
-      `;
+      
+      answers.license = ` MIT <br> This package is licensed under the MIT license, which means that anyone who uses it within your organization will be bound by the terms of the MIT license.<br> 
+        -Permission: The MIT License grants permission to anyone to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software. Users are not required to ask for permission or pay any royalties.<br> 
+        -Liability: The license comes with no warranty or liability. The software is provided "as is," and the copyright holder or contributors cannot be held liable for any damages or issues arising from its use.<br> 
+       -Attribution: The license requires that the original copyright notice and the license text must be included in all copies or substantial portions of the software.<br> 
+       -Compatibility: The MIT License is a permissive license, meaning it is compatible with other licenses. Developers can include MIT-licensed code in projects with different licenses without any conflict. <br> <br> 
+       For more information about the MIT License, [click here](https://opensource.org/licenses/MIT).`;
       break;
 
 
@@ -118,7 +116,7 @@ function renderLicenseChoice(license, answers) {
     default:
       break;
   }
-  return licenseText
+  return answers.license
 }
 
 //call init function to start the application
