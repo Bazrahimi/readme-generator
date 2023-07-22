@@ -21,9 +21,15 @@
 
 
 ## Technologies
-Technologies Used in this Project: 
-- None
+## Technologies Used
 
+- HTML
+- CSS
+- JavaScript
+- Node.js
+- GitHub
+- jQuery
+- Bootstrap
 
 
 ## License
@@ -49,7 +55,7 @@ Technologies Used in this Project:
 
 
 ## Contributing
-This project has been developed by .
+This project has been developed by Baz Rahimi.
 
 **We welcome contributions from the community!** If you would like to contribute to this project, please follow these guidelines:
 

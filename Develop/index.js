@@ -200,10 +200,14 @@ As this project is a one-time assignment, we are not currently open to accepting
 
 //append list of Technologies used
 function appendTechnologiesUsed(answers) {
-  const technologiesUsed = answers.technologies.length > 0 ? answers.technologies.map(tech => `- ${tech}`).join('\n') : 'None';
-  answers.technologiesUsed = `Technologies Used in this Project: \n- ${technologiesUsed}\n\n`;
-  
+  //check if there any technologies selected
+  const technologiesUsed = answers.technologies.length > 0
+    ? answers.technologies.map(tech => `- ${tech}`).join('\n')
+    : 'None';
+
+  answers.technologiesUsed = `## Technologies Used\n\n${technologiesUsed}\n`;
 }
+
 
 //call init function to start the application
 init();
