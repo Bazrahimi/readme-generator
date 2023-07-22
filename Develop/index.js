@@ -16,6 +16,9 @@ const questions = [
     type: 'input',
     name: 'title',
     message: 'What is the Project Title?',
+    validate: function(input) {
+      return input.trim() !== ''? true: 'Please enter a valid Project title.';
+    },
   },
   {
     type: 'input',
@@ -43,45 +46,7 @@ const questions = [
     type: 'editor',
     name: 'customInstallation',
     message: 'Edit the installation instructions as per your project requirements:',
-    when: function getCustomInstallation(answers) {
-      if (answers.installationOption === 'Custom') {
-        return `
-    # Custom Installation Guide
-    
-    Follow these steps to install and customize the project as per your requirements:
-    
-    1. **Clone the Project Repository from GitHub:**
-       - Open your terminal or command prompt.
-       - Run the following command to clone the project repository:
-        
-         git clone https://github.com/Bazrahimi/project-name.git
-         
-       - Change into the 'project-name' directory using the 'cd' command.
-    
-    2. **Open the Project with Your Favorite Text/Code Editor:**
-       - Use a text editor or code editor of your choice to work on the project files.
-       - Make any necessary changes or modifications as per your requirements.
-    
-    3. **Modify HTML Elements:**
-       - If you need to add, remove, or modify HTML elements, open the 'index.html' file located in the root of the project.
-       - Customize the HTML structure to fit your needs.
-    
-    4. **Modify CSS Styles:**
-       - For any visual adjustments, open the 'assets/css/style.css' file.
-       - Edit the CSS styles to change the appearance of the project.
-    
-    5. **Modify JavaScript Code:**
-       - If the project includes JavaScript functionality, open the 'assets/js/script.js' file.
-       - Customize the JavaScript code to add or modify features.
-    
-    Remember to save your changes, and you now have a customized version of the project running on your local machine!
-    
-    For any questions or issues, please refer to the project's documentation or contact the project owner on GitHub.
-        `;
-      }
-      return ``;
-    },
-   
+    when: (answers) => answers.installationOption === 'Custom',
   },
   {
     type: 'input',
@@ -119,9 +84,36 @@ const questions = [
   },
   {
     type: 'input',
+    name: 'email',
+    message: 'What is your Email address?',
+    //validate function ensure email is valid
+    validate: function(input) {
+      if (/^\S+@\S+\.\S+$/.test(input)) {
+        return true;
+      }
+      return 'Please enter a valid email address.'
+    }
+  },
+  {
+    type: 'input',
+    name: 'github',
+    message: 'What is your GitHub username?',
+    // You can add a validation function here to ensure the user enters a valid GitHub username
+    validate: function (input) {
+      // Basic GitHub username validation example (you can use a more sophisticated method)
+      if (/^[a-zA-Z\d](?:[a-zA-Z\d]|-(?=[a-zA-Z\d])){0,38}$/.test(input)) {
+        return true;
+      }
+      return 'Please enter a valid GitHub username.';
+    },
+  },
+
+  {
+    type: 'input',
     name: 'feedback',
     message: 'Any other questions or feedback regarding the project?',
   },
+
 ];
 
 //function to write README file
@@ -149,9 +141,9 @@ function init() {
       appendFurtherContributions(answers);
       appendTechnologiesUsed(answers);
      
-      if (answers.installationOption == 'Default') {
+      if (answers.installationOption === 'Default') {
         answers.installation = getDefaultInstallation(answers);
-      } else if (answers.installationOption == 'Custom' ) {
+      } else if (answers.installationOption === 'Custom' ) {
         answers.installation = getCustomInstallation(answers);
       }
 

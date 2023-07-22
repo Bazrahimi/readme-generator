@@ -1,5 +1,5 @@
 
-# readme
+# README creater
 
 ## Table of Contents
 - [Description](#description)
@@ -51,7 +51,11 @@ undefined
 ## Technologies Used
 
 
-None
+- HTML
+- CSS
+- JavaScript
+- Node.js
+- GitHub
 
 
 ## License
@@ -77,7 +81,7 @@ None
 
 
 ## Contributing
-This project has been developed by .
+This project has been developed by Baz Rahimi.
 
 **We welcome contributions from the community!** If you would like to contribute to this project, please follow these guidelines:
 
@@ -94,6 +98,6 @@ Thank you for contributing to our project!
 undefined
 
 For any questions or feedback, feel free to reach out to me via:
-- Email: undefined
-- GitHub: [undefined](https://github.com/undefined)
+- Email: bazrahimi1@hotmail.com
+- GitHub: [bazadsfa](https://github.com/bazadsfa)
     
