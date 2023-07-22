@@ -20,12 +20,45 @@ const questions = [
   {
     type: 'input',
     name: 'description',
-    message: 'What is the Project Description?',
+    message: `Provide a short desicption about your project. Use the following questions as a guide;
+        - what was your motivation?
+        - Why did you build this project?
+        - What problem does it solve?
+        - What did you learn?`,
+                  
   },
   {
-    type: 'input',
+    type: 'list',
+    name: 'installationOption',
+    message: 'Choose an installation option:',
+    choices: ['Default (npm Install)', 'Custom'],
+  },
+  {
+    type:'editor',
     name: 'installation',
-    message: 'Write about the Project installation process or requirements?',
+    message: 'Provide installation instruction:',
+    default: `
+  # installation Guide
+
+  Follow the steps to install:
+
+  1.  clone the repository:
+      git clone https://github.com/Bazrahimi/readme-generator.git
+
+  2.  navigate to direcotry:
+      cd readme-generator
+      
+  3.  Install dependencies:
+      install inquirer version 8.2.4 or above
+
+       Additional commands if needed:
+       -  If you are using a specific version of Node.js:
+       -  If you want to start the development server:
+        npm start
+
+  4.  Start the application:
+      npm start
+    `,
   },
   {
     type: 'input',
@@ -205,7 +238,7 @@ function appendTechnologiesUsed(answers) {
     ? answers.technologies.map(tech => `- ${tech}`).join('\n')
     : 'None';
 
-  answers.technologiesUsed = `## Technologies Used\n\n${technologiesUsed}\n`;
+  answers.technologiesUsed = `\n\n${technologiesUsed}\n`;
 }
 
 

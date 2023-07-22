@@ -1,11 +1,11 @@
 
-# 
+# Readme
 
 ## Table of Contents
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Technologies Used](#technologies)
+- [Technologies Used](#technologies-used)
 - [License](#license)
 - [Test](#test)
 - [Contributing](#contributing)
@@ -16,20 +16,35 @@
 
 ## Installation
 
+  # installation Guide
+
+  Follow the steps to install:
+
+  1.  clone the repository:
+      git clone https://github.com/Bazrahimi/readme-generator.git
+
+  2.  navigate to direcotry:
+      cd readme-generator
+      
+  3.  Install dependencies:
+      install inquirer version 8.2.4 or above
+
+       Additional commands if needed:
+       -  If you are using a specific version of Node.js:
+       -  If you want to start the development server:
+        npm start
+
+  4.  Start the application:
+      npm start
+    
 
 ## Usage
 
 
-## Technologies
 ## Technologies Used
 
+
 - HTML
-- CSS
-- JavaScript
-- Node.js
-- GitHub
-- jQuery
-- Bootstrap
 
 
 ## License
@@ -55,7 +70,7 @@
 
 
 ## Contributing
-This project has been developed by Baz Rahimi.
+This project has been developed by .
 
 **We welcome contributions from the community!** If you would like to contribute to this project, please follow these guidelines:
 

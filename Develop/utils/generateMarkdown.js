@@ -26,7 +26,7 @@ class MarkDown {
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Technologies Used](#technologies)
+- [Technologies Used](#technologies-used)
 - [License](#license)
 - [Test](#test)
 - [Contributing](#contributing)
@@ -41,7 +41,7 @@ ${answers.installation}
 ## Usage
 ${answers.usage}
 
-## Technologies
+## Technologies Used
 ${answers.technologiesUsed}
 
 ## License
