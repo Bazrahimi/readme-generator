@@ -1,5 +1,5 @@
 
-# Readme
+# readme
 
 ## Table of Contents
 - [Description](#description)
@@ -16,27 +16,34 @@
 
 ## Installation
 
-  # installation Guide
+  # Installation Guide
 
   Follow the steps to install:
 
   1.  clone the repository:
       git clone https://github.com/Bazrahimi/readme-generator.git
 
-  2.  navigate to direcotry:
-      cd readme-generator
+  2.  navigate to directory:
+      - cd readme-generator.
+      - you need Node.js (version 12.0.0 or above) installed on your system.
       
   3.  Install dependencies:
       install inquirer version 8.2.4 or above
 
-       Additional commands if needed:
-       -  If you are using a specific version of Node.js:
-       -  If you want to start the development server:
-        npm start
-
-  4.  Start the application:
+  4.  Run the application using command:
       npm start
-    
+
+  5.  the application will prompt you with a series of questions to gather details about your project.
+  
+  6.  Provide the required information, such as the project title, description, usage, technologies used, license, contributors, and more.
+
+  7. after answering all the questions, the app will generate a professional README.md file based on your input.
+
+  8. the generated README.md file will be saved in the root directory.
+
+  The <b>readme-generator</b> will streamline the process of creating detailed and professional README.md file for your projects.
+  
+undefined
 
 ## Usage
 
@@ -44,7 +51,7 @@
 ## Technologies Used
 
 
-- HTML
+None
 
 
 ## License

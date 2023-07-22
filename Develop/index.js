@@ -31,34 +31,57 @@ const questions = [
     type: 'list',
     name: 'installationOption',
     message: 'Choose an installation option:',
-    choices: ['Default (npm Install)', 'Custom'],
+    choices: ['Default', 'Custom'],
   },
   {
-    type:'editor',
+    type:'confirm',
     name: 'installation',
     message: 'Provide installation instruction:',
-    default: `
-  # installation Guide
-
-  Follow the steps to install:
-
-  1.  clone the repository:
-      git clone https://github.com/Bazrahimi/readme-generator.git
-
-  2.  navigate to direcotry:
-      cd readme-generator
-      
-  3.  Install dependencies:
-      install inquirer version 8.2.4 or above
-
-       Additional commands if needed:
-       -  If you are using a specific version of Node.js:
-       -  If you want to start the development server:
-        npm start
-
-  4.  Start the application:
-      npm start
-    `,
+    when: (answers) => answers.installationOption === 'Default',
+  },
+  {
+    type: 'editor',
+    name: 'customInstallation',
+    message: 'Edit the installation instructions as per your project requirements:',
+    when: function getCustomInstallation(answers) {
+      if (answers.installationOption === 'Custom') {
+        return `
+    # Custom Installation Guide
+    
+    Follow these steps to install and customize the project as per your requirements:
+    
+    1. **Clone the Project Repository from GitHub:**
+       - Open your terminal or command prompt.
+       - Run the following command to clone the project repository:
+        
+         git clone https://github.com/Bazrahimi/project-name.git
+         
+       - Change into the 'project-name' directory using the 'cd' command.
+    
+    2. **Open the Project with Your Favorite Text/Code Editor:**
+       - Use a text editor or code editor of your choice to work on the project files.
+       - Make any necessary changes or modifications as per your requirements.
+    
+    3. **Modify HTML Elements:**
+       - If you need to add, remove, or modify HTML elements, open the 'index.html' file located in the root of the project.
+       - Customize the HTML structure to fit your needs.
+    
+    4. **Modify CSS Styles:**
+       - For any visual adjustments, open the 'assets/css/style.css' file.
+       - Edit the CSS styles to change the appearance of the project.
+    
+    5. **Modify JavaScript Code:**
+       - If the project includes JavaScript functionality, open the 'assets/js/script.js' file.
+       - Customize the JavaScript code to add or modify features.
+    
+    Remember to save your changes, and you now have a customized version of the project running on your local machine!
+    
+    For any questions or issues, please refer to the project's documentation or contact the project owner on GitHub.
+        `;
+      }
+      return ``;
+    },
+   
   },
   {
     type: 'input',
@@ -125,6 +148,12 @@ function init() {
       appendContributors(answers);
       appendFurtherContributions(answers);
       appendTechnologiesUsed(answers);
+     
+      if (answers.installationOption == 'Default') {
+        answers.installation = getDefaultInstallation(answers);
+      } else if (answers.installationOption == 'Custom' ) {
+        answers.installation = getCustomInstallation(answers);
+      }
 
 
       const readmeContent = MarkDown.generateReadme(answers);
@@ -239,6 +268,81 @@ function appendTechnologiesUsed(answers) {
     : 'None';
 
   answers.technologiesUsed = `\n\n${technologiesUsed}\n`;
+}
+
+//function to get the default installation instruction
+function getDefaultInstallation(answers) {
+  if (answers.installationOption === 'Default') {
+  return `
+  # Installation Guide
+
+  Follow the steps to install:
+
+  1.  clone the repository:
+      git clone https://github.com/Bazrahimi/readme-generator.git
+
+  2.  navigate to directory:
+      - cd readme-generator.
+      - you need Node.js (version 12.0.0 or above) installed on your system.
+      
+  3.  Install dependencies:
+      install inquirer version 8.2.4 or above
+
+  4.  Run the application using command:
+      npm start
+
+  5.  the application will prompt you with a series of questions to gather details about your project.
+  
+  6.  Provide the required information, such as the project title, description, usage, technologies used, license, contributors, and more.
+
+  7. after answering all the questions, the app will generate a professional README.md file based on your input.
+
+  8. the generated README.md file will be saved in the root directory.
+
+  The <b>readme-generator</b> will streamline the process of creating detailed and professional README.md file for your projects.
+  `; 
+  }
+  return '';
+}
+
+// Function to generate custom installation instruction
+function getCustomInstallation(answers) {
+  if (answers.installationOption === 'Custom') {
+    return `
+# Custom Installation Guide
+
+Follow these steps to install and customize the project as per your requirements:
+
+1. **Clone the Project Repository from GitHub:**
+   - Open your terminal or command prompt.
+   - Run the following command to clone the project repository:
+    
+     git clone https://github.com/Bazrahimi/project-name.git
+     
+   - Change into the 'project-name' directory using the 'cd' command.
+
+2. **Open the Project with Your Favorite Text/Code Editor:**
+   - Use a text editor or code editor of your choice to work on the project files.
+   - Make any necessary changes or modifications as per your requirements.
+
+3. **Modify HTML Elements:**
+   - If you need to add, remove, or modify HTML elements, open the 'index.html' file located in the root of the project.
+   - Customize the HTML structure to fit your needs.
+
+4. **Modify CSS Styles:**
+   - For any visual adjustments, open the 'assets/css/style.css' file.
+   - Edit the CSS styles to change the appearance of the project.
+
+5. **Modify JavaScript Code:**
+   - If the project includes JavaScript functionality, open the 'assets/js/script.js' file.
+   - Customize the JavaScript code to add or modify features.
+
+Remember to save your changes, and you now have a customized version of the project running on your local machine!
+
+For any questions or issues, please refer to the project's documentation or contact the project owner on GitHub.
+    `;
+  }
+  return ``;
 }
 
 

@@ -37,6 +37,7 @@ ${answers.description}
 
 ## Installation
 ${answers.installation}
+${answers.customInstallation}
 
 ## Usage
 ${answers.usage}
