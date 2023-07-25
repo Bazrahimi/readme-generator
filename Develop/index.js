@@ -1,14 +1,8 @@
 
 const fs = require('fs');
 const path = require('path'); // Import the path module
-console.log(path);
-console.log('index.js: Imported fs module')
-
 const inquirer = require('inquirer')
-console.log('index.js: imported inquirer package');
 const MarkDown = require('./utils/generateMarkdown');
-console.log('index.js: imported MarkDown clas from generateMakdown.js');
-
 
 // Readme questions
 const questions = [
@@ -185,7 +179,8 @@ function renderLicenseChoice(license, answers) {
            This package is licensed under the Apache-2.0 license, which means that anyone who uses it within your organization will be bound by the terms of the Apache-2.0 license.
         </li>
       </ul>
-      `;
+      <br>
+      For more information about the Apache-2.0 License, [click here](https://www.apache.org/licenses/LICENSE-2.0).`;
       break;
 
     case 'GNU-GPLv3':
@@ -195,6 +190,8 @@ function renderLicenseChoice(license, answers) {
           This package is licensed under the GNU-GPLv3 license, which means that anyone who uses it within your organization will be bound by the terms of the GNU-GPLv3 license.
         </li>
       </ul>
+      <br>
+      For more information about the GNU-GPLv3 License, [click here](https://www.gnu.org/licenses/gpl-3.0).
       `;
       break;
 
@@ -205,6 +202,8 @@ function renderLicenseChoice(license, answers) {
              This package is licensed under the ISC license, which means that anyone who uses it within your organization will be bound by the terms of the ISC license.
           </li>
         </ul>
+        <br>
+        For more information about the ISC License, [click here](https://opensource.org/licenses/ISC).
         `;
         break;
 
@@ -223,6 +222,21 @@ function renderLicenseChoice(license, answers) {
   }
   return answers.license
 }
+
+//define for link the license Badge
+function renderLicenseBadge(license) {
+  const licenseBadges = {
+    'MIT': 'https://img.shields.io/badge/License-MIT-yellow.svg',
+    'Apache-2.0': 'https://img.shields.io/badge/License-Apache%202.0-blue.svg',
+    'GNU-GPLv3': 'https://img.shields.io/badge/License-GPLv3-blue.svg',
+    'ISC': 'https://img.shields.io/badge/License-ISC-blue.svg',
+    'None': ''
+  };
+  return license in licenseBadges ? `![License](${licenseBadges[license]})` : '';
+
+}
+
+
 
 //Render contributors 
 function appendContributors(answers) {
