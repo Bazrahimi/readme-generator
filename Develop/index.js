@@ -129,16 +129,14 @@ function init() {
   inquirer
     .prompt(questions)
     .then((answers) => {
+      const licenseBadge = renderLicenseBadge(answers.license);
+      answers.licenseBadge = licenseBadge;
       const licenseText = renderLicenseChoice(answers.license, answers);
       answers.license = licenseText;
       appendContributors(answers);
       appendFurtherContributions(answers);
       appendTechnologiesUsed(answers);
-
-      //Generate and store the licenseBadge in answers.licenseBadge
-      const licenseBadge = renderLicenseBadge(answers.license);
-      answers.licenseBadge = licenseBadge;
-     
+      
       if (answers.installationOption === 'Default') {
         answers.installation = getDefaultInstallation(answers);
       } else if (answers.installationOption === 'Custom' ) {

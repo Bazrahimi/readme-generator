@@ -2,7 +2,7 @@ function generateReadme(answers, licenseBadge) {
   return `
 # ${answers.title}
 
-${licenseBadge} // Add the license badge here
+${licenseBadge}
 
 ## Table of Contents
 - [Description](#description)
