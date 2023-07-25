@@ -1,5 +1,7 @@
 
-# Readme Genenerator
+# readme
+
+ // Add the license badge here
 
 ## Table of Contents
 - [Description](#description)
@@ -43,7 +45,6 @@
 
   The <b>readme-generator</b> will streamline the process of creating detailed and professional README.md file for your projects.
   
-undefined
 
 ## Usage
 
@@ -91,9 +92,6 @@ Thank you for contributing to our project!
     
 
 ## Questions
-undefined
-
 For any questions or feedback, feel free to reach out to me via:
-- Email: bazrahimi@hotmail.com
-- GitHub: [bazrahimi](https://github.com/bazrahimi)
-    
+- Email: bazrahimi@Hotmail.com
+- GitHub: bazrahimi

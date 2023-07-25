@@ -134,6 +134,10 @@ function init() {
       appendContributors(answers);
       appendFurtherContributions(answers);
       appendTechnologiesUsed(answers);
+
+      //Generate and store the licenseBadge in answers.licenseBadge
+      const licenseBadge = renderLicenseBadge(answers.license);
+      answers.licenseBadge = licenseBadge;
      
       if (answers.installationOption === 'Default') {
         answers.installation = getDefaultInstallation(answers);
@@ -142,7 +146,7 @@ function init() {
       }
 
 
-      const readmeContent = MarkDown.generateReadme(answers);
+      const readmeContent = MarkDown.generateReadme(answers, licenseBadge);
       writeToFile('README.md', readmeContent)
     });  
 }
@@ -226,17 +230,14 @@ function renderLicenseChoice(license, answers) {
 //define for link the license Badge
 function renderLicenseBadge(license) {
   const licenseBadges = {
-    'MIT': 'https://img.shields.io/badge/License-MIT-yellow.svg',
-    'Apache-2.0': 'https://img.shields.io/badge/License-Apache%202.0-blue.svg',
-    'GNU-GPLv3': 'https://img.shields.io/badge/License-GPLv3-blue.svg',
-    'ISC': 'https://img.shields.io/badge/License-ISC-blue.svg',
+    'MIT': 'https://img.shields.io/badge/License-MIT-yellow.png',
+    'Apache-2.0': 'https://img.shields.io/badge/License-Apache%202.0-blue.png',
+    'GNU-GPLv3': 'https://img.shields.io/badge/License-GPLv3-blue.png',
+    'ISC': 'https://img.shields.io/badge/License-ISC-blue.png',
     'None': ''
   };
   return license in licenseBadges ? `![License](${licenseBadges[license]})` : '';
-
 }
-
-
 
 //Render contributors 
 function appendContributors(answers) {
