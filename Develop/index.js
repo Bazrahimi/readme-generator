@@ -108,7 +108,6 @@ const questions = [
     validate: function (input) {
       // Basic GitHub username validation example (you can use a more sophisticated method)
       if (/^[a-zA-Z\d](?:[a-zA-Z\d]|-(?=[a-zA-Z\d])){0,38}$/.test(input)) {
-        // this.answers.github = `https://github.com/${input}`;
         return true;
       }
       return 'Please enter a valid GitHub username.';
@@ -314,6 +313,8 @@ function getDefaultInstallation(answers) {
   }
   return '';
 }
+
+
 
 // Function to generate custom installation instruction
 // function getCustomInstallation(answers) {

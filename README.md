@@ -1,5 +1,5 @@
 
-# Readme 
+# readme
 
 ![License](https://img.shields.io/badge/License-MIT-yellow.png)
 
@@ -52,16 +52,12 @@
 
 
 ## Demo
-https://www.google.com/
+
 
 ## Technologies Used
 
 
-- HTML
-- CSS
-- JavaScript
-- Node.js
-- GitHub
+None
 
 
 ## License
@@ -103,4 +99,4 @@ Thank you for contributing to our project!
 ## Questions
 For any questions or feedback, feel free to reach out to me via:
 - Email: bazrahimi@hotmail.com
-- GitHub: bazrahimi
+- GitHub: https://github.com/bazrahimi

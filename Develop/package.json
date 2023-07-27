@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --detectOpenHandles"
   },
   "author": "Baz Rahimi",
   "license": "MIT",
@@ -20,8 +20,16 @@
   "bugs": {
     "url": "https://github.com/Bazrahimi/readme-generator/issues"
   },
-  "devDependencies": {},
-  "keywords": ["readme", "generator", "node.js", "cli", "inquirer"],
+  "devDependencies": {
+    "jest": "^29.6.2"
+  },
+  "keywords": [
+    "readme",
+    "generator",
+    "node.js",
+    "cli",
+    "inquirer"
+  ],
   "engines": {
     "node": ">=12.0.0"
   },
