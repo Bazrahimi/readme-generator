@@ -8,6 +8,7 @@ ${licenseBadge}
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Video Demo](#demo)
 - [Technologies Used](#technologies-used)
 - [License](#license)
 - [Test](#test)
@@ -22,6 +23,9 @@ ${answers.installation}
 
 ## Usage
 ${answers.usage}
+
+## Demo
+${answers.demo}
 
 ## Technologies Used
 ${answers.technologiesUsed}
@@ -39,7 +43,7 @@ ${answers.contributingText}
 ## Questions
 For any questions or feedback, feel free to reach out to me via:
 - Email: ${answers.email}
-- GitHub: ${answers.github}
+- GitHub: https://github.com/${answers.github}
 `;
 }
 

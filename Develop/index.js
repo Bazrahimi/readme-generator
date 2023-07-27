@@ -28,7 +28,7 @@ const questions = [
     type: 'list',
     name: 'installationOption',
     message: 'Choose an installation option:',
-    choices: ['Default', 'Custom'],
+    choices: ['Default'],
   },
   {
     type:'confirm',
@@ -46,6 +46,18 @@ const questions = [
     type: 'input',
     name: 'usage',
     message: 'What is the Project Usage?',
+  },
+  {
+    type: 'input',
+    name: 'demo',
+    message: 'Please provide a link to the video demo (if available):',
+    validate: function(input) {
+      if (input.trim() === '' ||/^(https?:\/\/\S+)$/.test(input)) {
+        return true; 
+    }
+    return 'Please enter a valid Url!(e.g https://....';
+    },
+    
   },
   {
     type: 'checkbox',
@@ -96,16 +108,11 @@ const questions = [
     validate: function (input) {
       // Basic GitHub username validation example (you can use a more sophisticated method)
       if (/^[a-zA-Z\d](?:[a-zA-Z\d]|-(?=[a-zA-Z\d])){0,38}$/.test(input)) {
+        // this.answers.github = `https://github.com/${input}`;
         return true;
       }
       return 'Please enter a valid GitHub username.';
     },
-  },
-
-  {
-    type: 'input',
-    name: 'feedback',
-    message: 'Any other questions or feedback regarding the project?',
   },
 
 ];
@@ -139,11 +146,8 @@ function init() {
       
       if (answers.installationOption === 'Default') {
         answers.installation = getDefaultInstallation(answers);
-      } else if (answers.installationOption === 'Custom' ) {
-        answers.installation = getCustomInstallation(answers);
       }
-
-
+ 
       const readmeContent = MarkDown.generateReadme(answers, licenseBadge);
       writeToFile('README.md', readmeContent)
     });  
@@ -305,50 +309,51 @@ function getDefaultInstallation(answers) {
   8. the generated README.md file will be saved in the root directory.
 
   The <b>readme-generator</b> will streamline the process of creating detailed and professional README.md file for your projects.
+  
   `; 
   }
   return '';
 }
 
 // Function to generate custom installation instruction
-function getCustomInstallation(answers) {
-  if (answers.installationOption === 'Custom') {
-    return `
-# Custom Installation Guide
+// function getCustomInstallation(answers) {
+//   if (answers.installationOption === 'Custom') {
+//     return `
+// # Custom Installation Guide
 
-Follow these steps to install and customize the project as per your requirements:
+// Follow these steps to install and customize the project as per your requirements:
 
-1. **Clone the Project Repository from GitHub:**
-   - Open your terminal or command prompt.
-   - Run the following command to clone the project repository:
+// 1. **Clone the Project Repository from GitHub:**
+//    - Open your terminal or command prompt.
+//    - Run the following command to clone the project repository:
     
-     git clone https://github.com/Bazrahimi/project-name.git
+//      git clone https://github.com/Bazrahimi/project-name.git
      
-   - Change into the 'project-name' directory using the 'cd' command.
+//    - Change into the 'project-name' directory using the 'cd' command.
 
-2. **Open the Project with Your Favorite Text/Code Editor:**
-   - Use a text editor or code editor of your choice to work on the project files.
-   - Make any necessary changes or modifications as per your requirements.
+// 2. **Open the Project with Your Favorite Text/Code Editor:**
+//    - Use a text editor or code editor of your choice to work on the project files.
+//    - Make any necessary changes or modifications as per your requirements.
 
-3. **Modify HTML Elements:**
-   - If you need to add, remove, or modify HTML elements, open the 'index.html' file located in the root of the project.
-   - Customize the HTML structure to fit your needs.
+// 3. **Modify HTML Elements:**
+//    - If you need to add, remove, or modify HTML elements, open the 'index.html' file located in the root of the project.
+//    - Customize the HTML structure to fit your needs.
 
-4. **Modify CSS Styles:**
-   - For any visual adjustments, open the 'assets/css/style.css' file.
-   - Edit the CSS styles to change the appearance of the project.
+// 4. **Modify CSS Styles:**
+//    - For any visual adjustments, open the 'assets/css/style.css' file.
+//    - Edit the CSS styles to change the appearance of the project.
 
-5. **Modify JavaScript Code:**
-   - If the project includes JavaScript functionality, open the 'assets/js/script.js' file.
-   - Customize the JavaScript code to add or modify features.
+// 5. **Modify JavaScript Code:**
+//    - If the project includes JavaScript functionality, open the 'assets/js/script.js' file.
+//    - Customize the JavaScript code to add or modify features.
 
-Remember to save your changes, and you now have a customized version of the project running on your local machine!
+// Remember to save your changes, and you now have a customized version of the project running on your local machine!
 
-For any questions or issues, please refer to the project's documentation or contact the project owner on GitHub.
-    `;
-  }
-  return ``;
-}
+// For any questions or issues, please refer to the project's documentation or contact the project owner on GitHub.
+//     `;
+//   }
+//   return ``;
+// }
 
 
 //call init function to start the application

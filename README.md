@@ -1,12 +1,13 @@
 
-# README 
+# Readme 
 
-![License](https://img.shields.io/badge/License-Apache%202.0-blue.png)
+![License](https://img.shields.io/badge/License-MIT-yellow.png)
 
 ## Table of Contents
 - [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Video Demo](#demo)
 - [Technologies Used](#technologies-used)
 - [License](#license)
 - [Test](#test)
@@ -45,9 +46,13 @@
 
   The <b>readme-generator</b> will streamline the process of creating detailed and professional README.md file for your projects.
   
+  
 
 ## Usage
 
+
+## Demo
+https://www.google.com/
 
 ## Technologies Used
 
@@ -56,18 +61,27 @@
 - CSS
 - JavaScript
 - Node.js
-- jQuery
+- GitHub
 
 
 ## License
- Apache-2.0 <br>
+ MIT <br> This package is licensed under the MIT license, which means that anyone who uses it within your organization will be bound by the terms of the MIT license.<br> 
       <ul>
         <li>
-           This package is licensed under the Apache-2.0 license, which means that anyone who uses it within your organization will be bound by the terms of the Apache-2.0 license.
+          <i>Permission:</i> The MIT License grants permission to anyone to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software. Users are not required to ask for permission or pay any royalties.
         </li>
-      </ul>
-      <br>
-      For more information about the Apache-2.0 License, [click here](https://www.apache.org/licenses/LICENSE-2.0).
+        <li>
+          <i>Liability:</i> The license comes with no warranty or liability. The software is provided "as is," and the copyright holder or contributors cannot be held liable for any damages or issues arising from its use.
+        </li>
+        <li>
+          <i>Attribution:</i> The license requires that the original copyright notice and the license text must be included in all copies or substantial portions of the software.
+        </li>
+        <li>
+          <i>Compatibility:</i> The MIT License is a permissive license, meaning it is compatible with other licenses. Developers can include MIT-licensed code in projects with different licenses without any conflict.
+        </li>
+      </ul> 
+      <br> 
+      For more information about the MIT License, [click here](https://opensource.org/licenses/MIT).
 
 ## Test
 
