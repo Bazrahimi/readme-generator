@@ -63,7 +63,7 @@ const questions = [
     type: 'checkbox',
     name: 'technologies',
     message: 'Select the technologies used in the project:',
-    choices: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'GitHub', 'jQuery', 'Bootstrap', 'React', 'Vue.js', 'Express', 'MongoDB', 'MySQL', 'PostgreSQL', 'Python', 'Django' ],
+    choices: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'GitHub', 'inquirer', 'Jest', 'fs' ],
   },
   {
     type: 'list',
@@ -176,7 +176,7 @@ function renderLicenseChoice(license, answers) {
       <br> 
       For more information about the MIT License, [click here](https://opensource.org/licenses/MIT).`;
       break;
-
+å
     case 'Apache-2.0':
       answers.license = ` Apache-2.0 <br>
       <ul>
