@@ -315,47 +315,9 @@ function getDefaultInstallation(answers) {
 }
 
 
-
-// Function to generate custom installation instruction
-// function getCustomInstallation(answers) {
-//   if (answers.installationOption === 'Custom') {
-//     return `
-// # Custom Installation Guide
-
-// Follow these steps to install and customize the project as per your requirements:
-
-// 1. **Clone the Project Repository from GitHub:**
-//    - Open your terminal or command prompt.
-//    - Run the following command to clone the project repository:
-    
-//      git clone https://github.com/Bazrahimi/project-name.git
-     
-//    - Change into the 'project-name' directory using the 'cd' command.
-
-// 2. **Open the Project with Your Favorite Text/Code Editor:**
-//    - Use a text editor or code editor of your choice to work on the project files.
-//    - Make any necessary changes or modifications as per your requirements.
-
-// 3. **Modify HTML Elements:**
-//    - If you need to add, remove, or modify HTML elements, open the 'index.html' file located in the root of the project.
-//    - Customize the HTML structure to fit your needs.
-
-// 4. **Modify CSS Styles:**
-//    - For any visual adjustments, open the 'assets/css/style.css' file.
-//    - Edit the CSS styles to change the appearance of the project.
-
-// 5. **Modify JavaScript Code:**
-//    - If the project includes JavaScript functionality, open the 'assets/js/script.js' file.
-//    - Customize the JavaScript code to add or modify features.
-
-// Remember to save your changes, and you now have a customized version of the project running on your local machine!
-
-// For any questions or issues, please refer to the project's documentation or contact the project owner on GitHub.
-//     `;
-//   }
-//   return ``;
-// }
-
-
-//call init function to start the application
 init();
+
+module.exports = {
+renderLicenseChoice,
+renderLicenseBadge
+};
