@@ -1,5 +1,5 @@
 
-# Create Professional Readme
+# Professional README Generator
 
 ![License](https://img.shields.io/badge/License-MIT-yellow.png)
 
@@ -15,7 +15,7 @@
 - [Questions](#questions)
 
 ## Description
-to meke creating readme easy and dynamic
+The project is a Node.js CLI tool that automates README creation. Leveraging the inquirer package, it gathers project details via user prompts. The outcome is a structured, markdown README, ensuring consistent and professional documentation.
 
 ## Installation
 
@@ -49,7 +49,7 @@ to meke creating readme easy and dynamic
   
 
 ## Usage
-
+create readme.md
 
 ## Demo
 
@@ -57,7 +57,12 @@ to meke creating readme easy and dynamic
 ## Technologies Used
 
 
-None
+- JavaScript
+- Node.js
+- GitHub
+- inquirer
+- Jest
+- fs
 
 
 ## License
@@ -80,7 +85,7 @@ None
       For more information about the MIT License, [click here](https://opensource.org/licenses/MIT).
 
 ## Test
-Passed
+PASSED
 
 ## Contributing
 This project has been developed by Baz Rahimi.
