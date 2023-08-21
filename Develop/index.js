@@ -17,11 +17,12 @@ const questions = [
   {
     type: 'input',
     name: 'description',
-    message: `Provide a short desicption about your project. Use the following questions as a guide;
-        - what was your motivation?
-        - Why did you build this project?
-        - What problem does it solve?
-        - What did you learn?`,
+    message: `Provide a short description of your project. Use the following questions as a guide:
+      - What motivated you to build this project?
+      - Why did you build this project?
+      - What problem does it solve?
+      - What did you learn?`,
+
                   
   },
   {
@@ -74,12 +75,14 @@ const questions = [
   {
     type: 'input',
     name: 'contributors',
-    message: 'List the names or GitHub usernames of contributors (comma-separated if multiple):',
+    message: 'List the names or GitHub usernames of contributors (separate with commas if there are multiple):',
+
   },
   {
     type: 'list',
     name: 'furtherContributions',
-    message: 'Do you wish to welcome further contributions from the developer community?',
+    message: 'Do you want to allow further contributions from the developer community to your project?',
+
     choices: ['Yes', 'No'], 
   },  
 
@@ -91,7 +94,7 @@ const questions = [
   {
     type: 'input',
     name: 'email',
-    message: 'What is your Email address?',
+    message: 'Please provide your email address:',
     //validate function ensure email is valid
     validate: function(input) {
       if (/^\S+@\S+\.\S+$/.test(input)) {
@@ -103,7 +106,7 @@ const questions = [
   {
     type: 'input',
     name: 'github',
-    message: 'What is your GitHub username?',
+    message: 'Please provide your Github username',
     // You can add a validation function here to ensure the user enters a valid GitHub username
     validate: function (input) {
       // Basic GitHub username validation example (you can use a more sophisticated method)
