@@ -121,16 +121,23 @@ const questions = [
 
 //function to write README file
 function writeToFile(fileName, data) {
-  const rootDir = process.cwd();
-  const outputPath = path.resolve(rootDir,'..', fileName);
+  const rootDir = process.cwd(); 
+  const outputPath = path.join(rootDir, 'dist', fileName);
+  
+
+  if (!fs.existsSync(path.join(rootDir, 'dist'))) {
+    fs.mkdirSync(path.join(rootDir, 'dist'));
+  }
+
   fs.writeFile(outputPath, data, (err) => {
     if (err) {
       console.log(err);
     } else {
-      console.log(`Successfully generated ${fileName} in the root directory!`);
+      console.log(`Successfully generated ${fileName} in the 'dist' directory!`);
     }
   });
 }
+
 
 
 //function to initialize app
