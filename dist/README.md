@@ -1,5 +1,5 @@
 
-# read me
+# Create Professional Readme
 
 ![License](https://img.shields.io/badge/License-MIT-yellow.png)
 
@@ -15,7 +15,7 @@
 - [Questions](#questions)
 
 ## Description
-test
+to meke creating readme easy and dynamic
 
 ## Installation
 
@@ -49,7 +49,7 @@ test
   
 
 ## Usage
-created readme
+
 
 ## Demo
 
@@ -57,10 +57,7 @@ created readme
 ## Technologies Used
 
 
-- HTML
-- inquirer
-- Jest
-- fs
+None
 
 
 ## License
