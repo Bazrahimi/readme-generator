@@ -25,14 +25,13 @@ const questions = [
   {
     type: 'input',
     name: 'description',
-    message: `Provide a short description of your project. Use the following questions as a guide:
+    message: `Provide a short description of your project. Consider answering some of these questions to guide you:
       - What motivated you to build this project?
-      - Why did you build this project?
+      - Why did you build it?
       - What problem does it solve?
       - What did you learn?`,
-
-                  
   },
+  
   {
     type: 'list',
     name: 'installationOption',
